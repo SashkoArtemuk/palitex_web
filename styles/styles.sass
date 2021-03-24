@@ -22,9 +22,9 @@ body {
 
 .modal {
     background-color: $main-bg-color;
-    width: 30%;
     margin: auto;
     text-align:center;
+    width:30%;
     padding: 30px 30px 30px 30px;
     border-radius: 15px;
     border: 2px solid $main-border-color;
@@ -32,7 +32,30 @@ body {
         width:100%;
         margin-bottom: 5px;
     }
-}   
+}
+
+
+
+@media only screen and (max-width: 900px){
+    .modal {
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    }   
+}
+
+@media only screen and (max-device-width: 900px){
+    .modal {
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    }
+}
+
 
 .info {
     background-color: $main-bg-color;
@@ -47,6 +70,28 @@ body {
         margin-bottom: 5px;
     }
 }   
+
+
+
+@media only screen and (max-width: 900px){
+    .info {
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    padding-right: 0;
+    }   
+}
+
+@media only screen and (max-device-width: 900px){
+    .info {
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    padding-right: 0;
+    }
+}
+
+
 
 #header{
     width: 100%;
@@ -65,7 +110,43 @@ body {
         @include animation;
         background-color: $main-bg-color;
     }
+    .mobile{
+        display: none;
+        text-align: center;
+        width: 100%;
+    }
+    #menu{
+        font-weight: bold;
+        margin-left: 20px;
+        width: 30px;
+        h1{
+            margin: 0;
+        }
+    }
 }
+
+@media only screen and (max-width: 900px){
+    #header {
+        .button{
+            display: none;
+        }
+        .mobile{
+            display: inline-block;
+        }
+    }    
+}
+
+@media only screen and (max-device-width: 900px){
+    #header {
+        .button{
+            display: none;
+        }
+        .mobile{
+            display: inline-block;
+        }
+    }   
+}
+
 
 #transactions{
     border-collapse: collapse;
