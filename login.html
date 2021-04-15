@@ -4,6 +4,7 @@
     <title>paypaypay</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="styles/styles.css">
+     <script src="js.js"></script> 
   </head>
   <body>
     <div id="header">
@@ -20,20 +21,20 @@
             <span id="menu"><h1>≡ PayPayPay</h1></span>
         </span>
     </div>
-    <div class="modal">
+    <form class="modal" name="login_form">
         <h3>Log in</h3>
         <div class="field">
             Enter your email:
-            <input type="text">
+            <input type="text" name="email">
         </div>
         <div class="field">
             Enter your password:
-            <input type="password">
+            <input type="password" name="password">
         </div>
         <div class="field">
-            <input type="submit" value="Sign in">
+            <input type="submit" value="Log in" onclick="login();">
             <input type="reset" value="Cancel">
-        </div>
+        </form>
     </div>
   </body>
 </html>
