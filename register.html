@@ -4,6 +4,7 @@
     <title>paypaypay</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="styles/styles.css">
+     <script src="js.js"></script> 
   </head>
   <body>
     <div id="header">
@@ -20,35 +21,32 @@
             <span id="menu"><h1>≡ PayPayPay</h1></span>
         </span>
     </div>
-    <div class="modal">
+    <form class="modal" name="register_form">
         <h3>Sign in</h3>
         <div class="field">
             Enter your email:
-            <input type="text">
+            <input type="text"  name="email">
         </div>
         <div class="field">
-            Enter your username:
-            <input type="text">
+            Enter your first name:
+            <input type="text" name="first_name">
+        </div>
+        <div class="field">
+            Enter your last name:
+            <input type="text" name="last_name">
         </div>
         <div class="field">
             Enter your password:
-            <input type="password">
+            <input type="password" name="password">
         </div>
         <div class="field">
             Submit your password:
-            <input type="password">
+            <input type="password" name="password_submit">
         </div>
         <div class="field">
-            Select role:
-            <select name="roles">
-                <option value="Admin">Admin</option>
-                <option value="Regular">Regular</option>
-            </select>
-        </div>
-        <div class="field">
-            <input type="submit" value="Sign in">
+            <input type="button" value="Sign in" onClick="register()">
             <input type="reset" value="Cancel">
         </div>
-    </div>
+    </form>
   </body>
 </html>

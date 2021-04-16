@@ -1,17 +1,22 @@
-function login(){
-    form = document.forms.login_form,
-    user = {
-        "login":form.email.value,
-        "email":form.email.value,
-        "pass":form.password.value,
+var jwt = null
+
+function get_jwt(){
+    jwt = window.localStorage.getItem('jwt');
+}
+
+get_jwt()
+
+
+function register(){
+    var form = new FormData(document.forms.register_form)
+    if (form.get("password") != form.get("password_submit"))
+        alert("Passwords are not equal!") // TODO: redirect to err
+    user_to_create = {
+        "email" : form.get("email"),
+        "first_name": form.get("first_name"),
+        "last_name" : form.get("last_name"),
+        "password" : form.get("password"),
     }
-    console.log(user);
-    let response = fetch("http://127.0.0.1:5000/api/v1/auth/",{
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-    },
-    body: JSON.stringify(user)
-    })
+    console.log(user_to_create) // TODO: send post request
+    
 }
