@@ -6,6 +6,7 @@ $main-border-color: #92dec0;
 $button-shadow-color: #7cc4a8;
 $error-background-color: #ffb5ab;
 $error-border-color: #e39d94;
+$red: red;
 
 @mixin animation{
     -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
@@ -34,6 +35,10 @@ body {
     }
 }
 
+.wrong-credentials{
+	color: $red;
+	display: none;
+}
 
 
 @media only screen and (max-width: 900px){
@@ -157,6 +162,7 @@ body {
     background-color: $error-background-color;
     border: 2px solid $error-border-color;
 }
+
 
 
 

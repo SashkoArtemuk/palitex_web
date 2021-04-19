@@ -4,10 +4,11 @@
     <title>paypaypay</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="styles/styles.css">
+      <script src="js.js"></script>
   </head>
-  <body>
+  <body onload="get_user()">
     <div id="header">
-        <a href="register.html"><span class="button" id="register"><br>Sign in</span></a>
+        <a href="register.html"><span class="button" id="register"><br>Register</span></a>
         <a href="login.html"><span class="button" id="login"><br>Log in</span></a>
         <a href="user_info.html"><span class="button" id="info"><br>User info</span></a>
         <a href="edit.html"><span class="button" id="edit"><br>Edit user</span></a>
@@ -15,20 +16,24 @@
         <a href="deposit.html"><span class="button" id="deposit"><br>Deposit</span></a>
         <a href="make_transaction.html"><span class="button" id="transaction"><br>Make transaction</span></a>
         <a href="withdraw.html"><span class="button" id="withdraw"><br>Withdraw</span></a>
-        <a href="#"><span class="button" id="logout"><br>Log out</span></a>
+        <a href="#"><span class="button" id="logout" onclick="log_out()"><br>Log out</span></a>
         <span class="mobile">
             <span id="menu"><h1>≡ PayPayPay</h1></span>
         </span>
     </div>
-    <div class="info">
+    <form name="user_info" class="info">
         <h3>User info</h3>
         <div>
             Email:
-            <input type="text" disabled value="myemail@gmail.com">
+            <input type="text" name="email" disabled value="myemail@gmail.com">
         </div>
         <div>
-            Username:
-            <input type="text" disabled value="Sasha">
+            First name:
+            <input type="text" name="first_name" disabled value="Sasha">
+        </div>
+        <div>
+            Last name:
+            <input type="text" name="last_name" disabled value="Sasha">
         </div>
         <div>
             Role:
@@ -37,7 +42,7 @@
                 <option value="Regular">Regular</option>
             </select>
         </div>
-        <div>
+        <!--<div>
             Ballance:
             <input type="text" disabled value="100">
         </div>
@@ -63,7 +68,7 @@
                     <td>Sasha</td>
                 </tr>
             </table>
-        </div>
-    </div>
+        </div> -->
+    </form>
   </body>
 </html>

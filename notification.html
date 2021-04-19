@@ -4,8 +4,9 @@
     <title>paypaypay</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="js.js"></script>
   </head>
-  <body>
+  <body onload="get_notification()">
     <div id="header">
         <a href="register.html"><span class="button" id="register"><br>Sign in</span></a>
         <a href="login.html"><span class="button" id="login"><br>Log in</span></a>
@@ -15,14 +16,16 @@
         <a href="deposit.html"><span class="button" id="deposit"><br>Deposit</span></a>
         <a href="make_transaction.html"><span class="button" id="transaction"><br>Make transaction</span></a>
         <a href="withdraw.html"><span class="button" id="withdraw"><br>Withdraw</span></a>
-        <a href="#"><span class="button" id="logout"><br>Log out</span></a>
+        <a href="#"><span class="button" id="logout" onclick="log_out()"><br>Log out</span></a>
         <span class="mobile">
             <span id="menu"><h1>≡ PayPayPay</h1></span>
         </span>
     </div>
     <div class="info">
         <h3>Notification</h3>
-        Notify you about new notification.
+        <div id="notification_message">
+			Notification
+		</div>
         </div>
     </div>
   </body>

@@ -4,11 +4,12 @@
     <title>paypaypay</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="styles/styles.css">
-     <script src="js.js"></script> 
+     <script src="js.js"></script>
+      <script src="js.js"></script>
   </head>
   <body>
     <div id="header">
-        <a href="register.html"><span class="button" id="register"><br>Sign in</span></a>
+        <a href="register.html"><span class="button" id="register"><br>Register</span></a>
         <a href="login.html"><span class="button" id="login"><br>Log in</span></a>
         <a href="user_info.html"><span class="button" id="info"><br>User info</span></a>
         <a href="edit.html"><span class="button" id="edit"><br>Edit user</span></a>
@@ -16,7 +17,7 @@
         <a href="deposit.html"><span class="button" id="deposit"><br>Deposit</span></a>
         <a href="make_transaction.html"><span class="button" id="transaction"><br>Make transaction</span></a>
         <a href="withdraw.html"><span class="button" id="withdraw"><br>Withdraw</span></a>
-        <a href="#"><span class="button" id="logout"><br>Log out</span></a>
+        <a href="#"><span class="button" id="logout" onclick="log_out()"><br>Log out</span></a>
         <span class="mobile">
             <span id="menu"><h1>≡ PayPayPay</h1></span>
         </span>
@@ -32,9 +33,12 @@
             <input type="password" name="password">
         </div>
         <div class="field">
-            <input type="submit" value="Log in" onclick="login();">
-            <input type="reset" value="Cancel">
-        </form>
-    </div>
+            <input type="button" value="Log in" onclick="login();">
+            <input type="reset" value="Cancel" onclick="get_error();">
+		</div>
+		<div class="field wrong-credentials" >
+			Wrong username or password.
+		</div>
+	</form>
   </body>
 </html>
