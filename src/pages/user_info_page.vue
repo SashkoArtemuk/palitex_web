@@ -1,5 +1,5 @@
 <template>
-    <div class="info">
+    <div class="modal">
         <h3>User info</h3>
         <div>
             Email:

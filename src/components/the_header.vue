@@ -16,8 +16,8 @@
              <span class="button">Make transaction</span>
           </router-link>
           <router-link to="/withdraw"><span class="button">Withdraw</span></router-link>
-          <router-link to="/" @click.native="onLogout">
-              <span class="button">Log out</span>
+          <router-link to="/" >
+              <span class="button" @click="onLogout">Log out</span>
           </router-link>
       </template>
       <span class="mobile">
